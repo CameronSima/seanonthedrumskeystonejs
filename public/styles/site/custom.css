@@ -1,0 +1,76 @@
+body {
+	font-family: "Open Sans" !important;
+	font-size: 16px;
+}
+
+#bio {
+	width: 336px;
+	display: inline-block;
+}
+
+#bio-text {
+	padding: 8px;
+}
+
+#right-panel {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 50px;
+	width: 570px;
+}
+
+.show, .section {
+	padding-left: 20px;
+}
+
+.futureShow {
+	color: #00C819;
+}
+
+.pastShow {
+	color: #FF0D00;
+}
+
+#nav-col {
+	padding-top: 89px;
+	margin-left:30px;
+	margin-right: 30px;
+}
+
+#main-content {
+	display: inline-block;
+	width: 700px;
+}
+
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  /*  width: 100%;*/
+  }
+
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+	#nav-col {
+		padding: 0px;
+		margin: 0px;
+	}
+
+	#main-content {
+		width: 100%;
+	}
+}
+
