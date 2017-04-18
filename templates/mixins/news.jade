@@ -1,0 +1,10 @@
+mixin news(news, emptyMessage)
+	if news.length
+			each piece in news
+				hr
+				div.section
+					p #{ piece._.publishedDate.format('MMMM Do, YYYY') }
+					p.readmore:  a(href='/news/post/' + piece.slug) #{ piece.title }
+
+	else 
+		p #{ emptyMessage }

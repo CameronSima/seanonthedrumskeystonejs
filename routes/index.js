@@ -36,10 +36,16 @@ exports = module.exports = function (app) {
 
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/blog/:category?', routes.views.blog);
-	app.get('/blog/post/:post', routes.views.post);
+	app.get('/audio', routes.views.audio);
+	app.get('/news/:category?', routes.views.blog);
+	app.get('/news/post/:post', routes.views.post);
 	app.all('/contact', routes.views.contact);
 	app.get('/shows', routes.views.shows);
+
+	// Redirect /admin to admin panel for convenience
+	app.get('/admin', function(req, res) {
+		res.redirect('/keystone');
+	});
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

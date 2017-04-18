@@ -10,8 +10,8 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	'name': 'seanSite',
-	'brand': 'seanSite',
+	'name': 'Sean on the Drums',
+	'brand': 'Sean on the Drums',
 
 	'less': 'public',
 	'static': 'public',
@@ -43,6 +43,7 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
+	shows: 'shows',
 	posts: ['posts', 'post-categories'],
 	enquiries: 'enquiries',
 	users: 'users',

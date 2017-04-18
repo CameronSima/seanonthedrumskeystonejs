@@ -7,18 +7,19 @@ body {
 #bio {
 	width: 336px;
 	display: inline-block;
+	float: left;
 }
 
-#bio-text {
+.bio-text {
 	padding: 8px;
 }
 
-#right-panel {
+#bio-right {
 	display: inline-block;
-	vertical-align: top;
-	padding-left: 50px;
-	width: 570px;
+	margin: 0px 15px 15px 15px;
+	width: 340px;
 }
+
 
 .show, .section {
 	padding-left: 20px;
@@ -32,22 +33,38 @@ body {
 	color: #FF0D00;
 }
 
+#main-img {
+	width: 100%;
+}
+
 #nav-col {
 	/*padding-top: 89px;*/
 	padding-top: 15px;
+
 }
 
 #main-content {
 	display: inline-block;
 	width: 700px;
+	margin-top: 10px;
+}
+
+.frontImageCont {
+	display: inline-block;
 }
 
 #left-nav > li > a {
 	background-color: #fcfcfc;
 }
 
+#blog-list { 
+	width: 100%;
+ }
+
 #site-title {
 	text-align: center;
+	font-family: "Lato", "Open Sans", "Sans serif";
+	font-size: 50px;
 }
 
 @media (min-width: 768px) {
@@ -57,9 +74,8 @@ body {
   }
 
   .navbar-default {
-	border: none;
-}
-
+		border: none;
+	}
 
   .sidebar-nav .navbar ul {
     float: none;
@@ -80,6 +96,7 @@ body {
 	#nav-col {
 		padding: 0px;
 		margin: 0px;
+		width: 100%;
 	}
 
 
@@ -93,11 +110,7 @@ body {
 	#site-title {
 		display: none;
 	}
-	#nav-col {
-		width: 100%;
-		margin: 0px;
-		padding: 0px;
-	}
+
   .navbar-header {
       float: none;
   }

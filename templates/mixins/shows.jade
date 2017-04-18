@@ -1,6 +1,7 @@
 mixin shows(shows, emptyMessage)
 	if shows.length 
 		each show in shows
+			hr
 			div.show
 				p #{ show._.date.format('MMMM Do, YYYY') }
 				p <strong> #{ show.band } </strong>
@@ -8,9 +9,11 @@ mixin shows(shows, emptyMessage)
 				span #{ show.location.city }
 				br
 				br
-				p #{ show.description }
-				p #{ show.playingWith }.
-			hr
+				p &nbsp; #{ show.description }
+				if show.playingWith
+					p &nbsp; #{ show.playingWith }
+				if show.link
+					p: a(href='http://' + show._.link.format()) &nbsp;&nbsp; Tickets
 	else
 		p #{ emptyMessage }
 

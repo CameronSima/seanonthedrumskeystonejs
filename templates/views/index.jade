@@ -1,21 +1,41 @@
 extends ../layouts/default
 include ../mixins/shows
+include ../mixins/news
 
 
 block content
-		//-.container: .row
-		div#bio
+	div#main-content
+		.container
+			br
 			//-h1#site-title SEAN ON THE DRUMS
-			h4 Sean McGuinness
-			div.frontImageCont
+			div#bio
 
-				img(src='/images/sean.jpg', width='334')
+				img( id='main-img', src='/images/sean.jpg', width='334')
 
-				p#bio-text Sean McGuinness is an American musician living in Philadelphia. He plays drums in the bands Pissed Jeans and Rat Fist. He is a beer fan. Also a good vibe enthusiast.
+				p.bio-text Sean McGuinness 
+		
+			div#bio-right 
+				p Sean McGuinness is an American musician living in Philadelphia. He plays drums in the bands Pissed Jeans and Rat Fist. 
+				p He is a beer fan. Also a good vibe enthusiast.
+				p: a(href='http://instagram.com/yumsean') Instagram
+				p: a(href='https://twitter.com/thepissedjeans') Twitter
+
+
 
 		
 		h2 Latest
 		div.section
 			h3 Shows
-			+shows(data.upcomingShows, 'No upcoming shows.')
+			+shows(data.upcomingShows.slice(0, 3), 'No upcoming shows.')
+			if data.upcomingShows.length > 3
+				br
+				a(href='/shows') More...
+
+		div.section
+			h3 News
+			+news(data.news.slice(0, 3), 'No current news.')
+			if data.news.length > 3
+				hr
+				a(href='/news') More...
+
 
