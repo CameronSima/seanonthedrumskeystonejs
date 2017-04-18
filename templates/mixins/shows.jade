@@ -1,0 +1,16 @@
+mixin shows(shows, emptyMessage)
+	if shows.length 
+		each show in shows
+			div.show
+				p #{ show._.date.format('MMMM Do, YYYY') }
+				p <strong> #{ show.band } </strong>
+				span.h4 #{ show.location.venue }, 
+				span #{ show.location.city }
+				br
+				br
+				p #{ show.description }
+				p #{ show.playingWith }.
+			hr
+	else
+		p #{ emptyMessage }
+

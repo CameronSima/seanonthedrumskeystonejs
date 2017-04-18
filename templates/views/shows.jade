@@ -1,0 +1,12 @@
+extends ../layouts/default
+include ../mixins/shows
+
+block content
+	h1 Shows
+	h3 Upcoming
+	br
+	+shows(data.shows.future, "No shows currently scheduled.")
+
+	
+	h3 Recent
+	+shows(data.shows.past, "No past shows listed.")

@@ -1,10 +1,11 @@
 extends ../layouts/default
+include ../mixins/shows
 
 
 block content
 		//-.container: .row
 		div#bio
-			h1#site-title SEAN ON THE DRUMS
+			//-h1#site-title SEAN ON THE DRUMS
 			h4 Sean McGuinness
 			div.frontImageCont
 
@@ -16,18 +17,5 @@ block content
 		h2 Latest
 		div.section
 			h3 Shows
+			+shows(data.upcomingShows, 'No upcoming shows.')
 
-			if data.upcomingShows.length 
-				each show in data.upcomingShows
-					div.show
-						p #{ show._.date.format('MMMM Do, YYYY') }
-						p <strong> #{ show.band } </strong>
-						span.h4 #{ show.location.venue }, 
-						span #{ show.location.city }
-						br
-						br
-						p #{ show.description }
-						p #{ show.playingWith }.
-					hr
-			else
-				p No upcoming shows.

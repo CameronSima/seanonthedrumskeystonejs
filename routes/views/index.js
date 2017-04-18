@@ -15,11 +15,14 @@ exports = module.exports = function (req, res) {
 	view.on('init', function(next) {
 		keystone.list('Show').model.find()
 		.sort('date')
+
+		// Limit 4 because even though we're displaying 3, we want to know if there are more current shows
+		// so we know when to display 'show more' link.
+		.limit(4)
 		.exec(function(err, results) {
 			if (err || !results.length) {
 				return next(err)
 			}
-			console.log(results)
 			var upcoming = results.filter(function(show) {
 				return show.upcoming;
 			})
