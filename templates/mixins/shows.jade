@@ -5,6 +5,10 @@ mixin shows(shows, emptyMessage)
 			div.show
 				p #{ show._.date.format('MMMM Do, YYYY') }
 				p <strong> #{ show.band } </strong>
+
+				if show.link
+					p(style="float:right"): a(href='http://' + show._.link.format()) Tickets
+
 				span.h4 #{ show.location.venue }, 
 				span #{ show.location.city }
 				br
@@ -12,8 +16,6 @@ mixin shows(shows, emptyMessage)
 				p &nbsp; #{ show.description }
 				if show.playingWith
 					p &nbsp; #{ show.playingWith }
-				if show.link
-					p: a(href='http://' + show._.link.format()) &nbsp;&nbsp; Tickets
 	else
 		p #{ emptyMessage }
 

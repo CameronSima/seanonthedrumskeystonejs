@@ -1,5 +1,6 @@
 var keystone = require('keystone');
 var Enquiry = keystone.list('Enquiry');
+var mailer = require('../../scripts/mailer.js');
 
 exports = module.exports = function (req, res) {
 
@@ -14,7 +15,11 @@ exports = module.exports = function (req, res) {
 	locals.enquirySubmitted = false;
 
 	// On POST requests, add the Enquiry item to the database
+	// and send email
 	view.on('post', { action: 'contact' }, function (next) {
+
+		// send email to process.env.SEANS_EMAIL
+		mailer(locals.formData);
 
 		var newEnquiry = new Enquiry.model();
 		var updater = newEnquiry.getUpdateHandler(req);

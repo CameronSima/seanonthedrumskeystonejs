@@ -93,6 +93,7 @@ body {
 
 
 @media (max-width: 991px) {
+
 	#nav-col {
 		padding: 0px;
 		margin: 0px;
@@ -144,5 +145,11 @@ body {
   }
   .collapse.in{
       display:block !important;
+  }
+}
+
+@media(min-width: 992px) {
+   #top-container {
+    width: 742px;
   }
 }

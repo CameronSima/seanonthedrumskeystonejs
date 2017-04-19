@@ -5,7 +5,7 @@ include ../mixins/news
 
 block content
 	div#main-content
-		.container
+		.container#top-container
 			br
 			//-h1#site-title SEAN ON THE DRUMS
 			div#bio
@@ -19,6 +19,12 @@ block content
 				p He is a beer fan. Also a good vibe enthusiast.
 				p: a(href='http://instagram.com/yumsean') Instagram
 				p: a(href='https://twitter.com/thepissedjeans') Twitter
+				hr
+				h3 News
+				+news(data.news.slice(0, 3), 'No current news.')
+				if data.news.length > 3
+					hr
+					a(href='/news') More...
 
 
 
