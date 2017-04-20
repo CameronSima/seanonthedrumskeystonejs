@@ -10,7 +10,7 @@ block content
 			//-h1#site-title SEAN ON THE DRUMS
 			div#bio
 
-				img( id='main-img', src='/images/sean.jpg', width='334')
+				img( id='main-img', src='/images/Sean on the Drums.jpg', width='334')
 
 				p.bio-text Sean McGuinness 
 		
@@ -25,11 +25,8 @@ block content
 				if data.news.length > 3
 					hr
 					a(href='/news') More...
-
-
-
-		
-		h2 Latest
+	
+		//- h2 Latest
 		div.section
 			h3 Shows
 			+shows(data.upcomingShows.slice(0, 3), 'No upcoming shows.')
@@ -37,11 +34,11 @@ block content
 				br
 				a(href='/shows') More...
 
-		div.section
-			h3 News
-			+news(data.news.slice(0, 3), 'No current news.')
-			if data.news.length > 3
-				hr
-				a(href='/news') More...
+		//- div.section
+		//- 	h3 News
+		//- 	+news(data.news.slice(0, 3), 'No current news.')
+		//- 	if data.news.length > 3
+		//- 		hr
+		//- 		a(href='/news') More...
 
 

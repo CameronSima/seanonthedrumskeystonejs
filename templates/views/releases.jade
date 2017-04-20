@@ -1,0 +1,90 @@
+extends ../layouts/default
+
+block content
+	div#main-content
+		h1 Releases
+		for release, i in data.releases
+			if i % 2 === 1
+				div.release-row
+					div.release-col
+						img(class="release", src="images/releases/" + release, width='300')
+			else
+				div.release-col
+					img(class="release", src="images/releases/" + release, width='300')
+
+
+	//- div.container-fluid
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/ADIBAW LP.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/ADIBAW Split.jpg", width='300')
+			
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/An Estate.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/BBC.jpg", width='300')
+
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/Bazhena EP.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/Dead Rails.jpg", width='300')
+
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/Don't Need Smoke.jpg", width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/Going To Target.jpg", width='300')
+
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/Hives Need Hearts.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/Honeys.jpg", width='300')
+
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/Hope For Men.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/House Ties.jpg", width='300')
+
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/KEXP Live.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/KEXP Set.jpg", width='300')
+			
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/King of jeans.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/Nights and Weekends.jpg", width='300')
+
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/Rat Fist 1.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/Rat Fist 1a.jpg", width='300')
+
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/Sam Kinison Woman.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/Seeing Hands CD.jpg", width='300')
+
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/Seeing Hands.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/Street Stains.jpg", width='300')
+
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/Summer in the City.jpg', width='300')
+	//- 		div.col-xs-4
+	//- 			img(src="images/releases/Tour EP.jpg", width='300')
+	//- 	div.row
+	//- 		div.col-xs-4
+	//- 			img(src='images/releases/Why Love Now.jpg', width='300')

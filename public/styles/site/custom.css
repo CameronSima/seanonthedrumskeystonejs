@@ -2,7 +2,14 @@ body {
 	font-family: "Open Sans" !important;
 	font-size: 16px;
 }
+.release-row {
+  display: inline-block;
+}
 
+.release-col {
+  display: inline-block;
+  margin: 10px;
+}
 
 #bio {
 	width: 336px;
@@ -67,6 +74,7 @@ body {
 	font-size: 50px;
 }
 
+
 @media (min-width: 768px) {
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
@@ -101,9 +109,11 @@ body {
 	}
 
 
-	#main-content {
+	#main-content, .release, #bio-right, #bio, #main-img {
 		width: 100%;
 	}
+
+
 /*	.container {
 		margin: 0px;
 		width: 100%;
