@@ -35,7 +35,7 @@ exports = module.exports = function (req, res) {
 
 	view.on('init', function(next) {
 		keystone.list('Post').model.find()
-		.sort('date')
+		.sort('-publishedDate')
 		.limit(4)
 		.exec(function(err, results) {
 			if (err || !results.length) {

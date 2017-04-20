@@ -1,6 +1,6 @@
 extends ../layouts/default
 include ../mixins/shows
-include ../mixins/news
+include ../mixins/frontNews
 
 
 block content
@@ -21,10 +21,10 @@ block content
 				p: a(href='https://twitter.com/thepissedjeans') Twitter
 				hr
 				h3 News
-				+news(data.news.slice(0, 3), 'No current news.')
+				+frontNews(data.news.slice(0, 3), 'No current news.')
 				if data.news.length > 3
-					hr
-					a(href='/news') More...
+					h5
+						a(href='/news') More...
 	
 		//- h2 Latest
 		div.section

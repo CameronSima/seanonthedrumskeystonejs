@@ -1,0 +1,10 @@
+mixin frontNews(news, emptyMessage)
+	if news.length
+			each piece in news
+				div.section
+					//- p: #{ piece._.publishedDate.format('MMMM Do, YYYY') } - a(href='/news/post/' + piece.slug) #{ piece.title }
+					p
+						| #{piece._.publishedDate.format('MMMM Do, YYYY') } - 
+						a(href='/news/post/' + piece.slug) #{ piece.title }
+	else 
+		p #{ emptyMessage }
