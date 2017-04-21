@@ -3,6 +3,11 @@ extends ../layouts/default
 block content
 	div#main-content
 		h1 Releases
+
+		div.release-col
+			a(href='https://seanonthedrums.bandcamp.com/releases')
+				h2(style="font-style: italic") *NEW!
+				img(class="release", src="images/releases/rtbr.jpg", width='623')
 		for release, i in data.releases
 			if i % 2 === 1
 				div.release-row

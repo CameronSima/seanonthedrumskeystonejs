@@ -13,7 +13,8 @@ mixin shows(shows, emptyMessage)
 				span #{ show.location.city }
 				br
 				br
-				p &nbsp; #{ show.description }
+				if show.description
+					p &nbsp; #{ show.description }
 				if show.playingWith
 					p &nbsp; #{ show.playingWith }
 	else
