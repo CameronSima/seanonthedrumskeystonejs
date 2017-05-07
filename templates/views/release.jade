@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block content
+	div#main-content
+		img(src=release.image, class='release', width: '100%')
+		p release.title
+		p release.releaseDate
+		p release.price
+		p release.description
+		a(href='/purchase/' + release.title)
+			p buy
+
+

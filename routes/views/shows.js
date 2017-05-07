@@ -25,7 +25,7 @@ exports = module.exports = function (req, res) {
 			});
 
 			locals.data.shows.past = results.filter(function(show) {
-				return show.upcoming = false;
+				return show.upcoming == false;
 			})
 			next();
 		})
